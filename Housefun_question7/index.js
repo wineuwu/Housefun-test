@@ -8,29 +8,30 @@ creatInfoCard(data);
 // createElement
 function creatInfoCard(data){
   const cardData = data.map(item => {
+    const {CoverPic, Address, CaseName, Patterns, RegArea, OriginalPrice, Price} = item
     return`
     <a href="" target="_blank" class="item">
       <div class="card-item">
         <div class="card-pic">
-          <img src=${item.CoverPic}>
+          <img src=${CoverPic}>
         </div>
         <div class="card-txt">
-          <span class="location">${item.Address}</span>
-          <h3>${item.CaseName}</h3>
+          <span class="location">${Address}</span>
+          <h3>${CaseName}</h3>
           <div class="size">
             <div class="patterns">
-              <span>${item.Patterns}</span>
+              <span>${Patterns}</span>
             </div>
             <div class="regArea">
-              <span>${item.RegArea}坪</span>
+              <span>${RegArea}坪</span>
             </div>
           </div>
           <div class="price">
             <div class="orginPrice">
-              <span>${item.OriginalPrice} 萬</span>
+              <span>${OriginalPrice} 萬</span>
             </div>
             <div class="unitPrice">
-              <span><em>${item.Price}</em>萬</span>
+              <span><em>${Price}</em>萬</span>
             </div>  
           </div>
         </div>
